@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap");
+
+* {
+margin: 0;
+padding: 0;
+}
+
+:root {
+--primary-color: #000000;
+--secondary-color: #f6f6f6;
+--accent-color: #22d4fd;
+--hover-color: #272727;
+}
+
+body {
+box-sizing: border-box;
+/* height: 100vh; */
+background-color: var(--primary-color);
+color: var(--secondary-color);
+}
+
+.nav {
+padding: 2% 0 0 5%;
+display: flex;
+gap: 3rem;
+}
+
+.nav__link {
+text-decoration: none;
+font-family: "Montserrat", sans-serif;
+font-size: 1.13rem;
+font-weight: 600;
+color: var(--accent-color);
+}
+
+.titulo-destaque {
+color: var(--accent-color);
+}
+
+.container {
+display: flex;
+align-items: center;
+justify-content: space-around;
+gap: 1rem;
+padding: 2em 2.5em;
+}
+
+.container__content {
+width: 50%;
+display: flex;
+flex-direction: column;
+gap: 1.5em;
+}
+
+.container__content__title {
+font-size: 2.25rem;
+font-family: "Krona One", sans-serif;
+}
+
+.container__content__text {
+font-size: 1.5rem;
+font-family: "Montserrat", sans-serif;
+}
+
+.container__content__text__about {
+font-size: 1rem;
+font-family: "Montserrat", sans-serif;
+}
+
+.container__content__links {
+display: flex;
+flex-direction: column;
+/* justify-content: space-between; */
+align-items: center;
+gap: 2em;
+}
+
+.container__content__links__navegacao {
+width: 70%;
+text-align: center;
+border-radius: 8px;
+font-size: 1.13rem;
+padding: 1rem 0;
+text-decoration: none;
+color: var(--secondary-color);
+font-family: "Montserrat", sans-serif;
+font-weight: 600;
+border: 1px solid var(--accent-color);
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 0.5rem;
+}
+
+.container__image {
+width: 40%;
+}
+
+@keyframes hoverColorChange {
+from {
+background-color: var(--primary-color);
+}
+to {
+background-color: var(--hover-color);
+}
+}
+
+.container__content__links__navegacao:hover {
+animation-name: hoverColorChange;
+animation-duration: 1s;
+background-color: var(--hover-color);
+}
+
+.container__content__links__subtitle {
+font-family: "Krona One", sans-serif;
+font-weight: 400;
+font-size: 1.13rem;
+}
+
+.footer {
+background-color: var(--accent-color);
+color: var(--primary-color);
+padding: 1em 0;
+text-align: center;
+font-family: "Montserrat", sans-serif;
+font-size: 0.88rem;
+}
+
+@media (max-width: 1200px) {
+.nav {
+padding: 6%;
+justify-content: center;
+}
+
+.container {
+flex-direction: column-reverse;
+padding: 5%;
+}
+
+.container__content {
+width: auto;
+}
+}
